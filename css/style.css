@@ -1,0 +1,391 @@
+html {
+    /* 1remのフォントサイズを10pxに設定 */
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 2rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+/* header->nav */
+
+.top-nav {
+    width: 100%;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.top-nav-logo {
+    margin-left: 10px;
+}
+
+.top-nav-link {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 2rem;
+    color: black;
+    font-family: 'Russo One', sans-serif;
+}
+
+.top-nav-link > li:nth-child(n+1) {
+    margin-left: 10px;
+}
+
+/* top ハンバーガーメニュー(スマホのみ使用) */
+.top-nav-buttom {
+    display: none;
+}
+
+.top-nav-menu {
+    display: none;
+}
+
+/* header->title */
+
+.top-title {
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    margin-top: 40px;
+    position: relative;
+}
+
+.top-title > video {
+    width: 100%;
+    height: 100%;
+}
+
+.title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(../media/dot.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title > h1 {
+    color: rgb(255, 208, 0);
+    font-size: 7rem;
+    text-align: center;
+    font-family: 'Russo One', sans-serif;   
+}
+
+/* 共通 */
+.common-inner {
+    max-width: 1200px;
+    padding: 80px 50px;
+    margin: 0 auto;
+}
+
+.subtitle {
+    font-size: 5rem;
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: 'Russo One', sans-serif;
+}
+
+/* concept */
+.concept {
+    background-color: rgb(255, 188, 2);
+    color: black;
+}
+
+.concept-main {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.concept-item {
+    width: 90%;
+    padding: 10px;
+    background: white;
+}
+
+.concept-item:nth-child(n+2) {
+    margin-left:15px;
+}
+
+.concept-item > h3 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.concept-item > img {
+    margin-bottom: 15px;
+}
+
+/* Product */
+.product {
+    background: url(../media/dot_pad.png), url(../media/product_background.jpg);
+    background-repeat: repeat, no-repeat;
+    background-size: unset, cover;
+}
+
+.product .subtitle {
+    color: white;
+}
+
+.product-main {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.product-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255, 180, 19);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.product-item:nth-child(n+1) {
+    margin-top: 20px;
+}
+
+.product-item > img {
+    width: 50%;
+    border-radius: 10px;
+}
+
+.product-item:nth-child(2) > img {
+    order: 1;
+}
+
+.product-item:nth-child(2) > p {
+    order: 0;
+}
+
+/* Works */
+.works {
+    background: rgb(0, 0, 0);
+    color: rgb(255, 180, 19);
+}
+
+.works-items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.works-item {
+    margin: 10px;
+}
+
+/* contact */
+.contact {
+    padding: 80px 0;
+    width: 100%;
+}
+
+.contact-main {
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+
+iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.contact-info {
+    position: absolute;
+    display: block;
+    z-index: 1;
+    top: 10px;
+    left: 10px;
+    border-radius: 10px;
+    background: rgb(255, 255, 255);
+    opacity: .9;
+    border-collapse: separate;
+    border-spacing: 10px 15px;
+}
+
+.contact-info th {
+    width: 30%;
+    text-align: left;
+}
+
+.contact-info td {
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+}
+
+.contact-info td {
+    width: 60%;
+}
+
+/* footer */
+footer {
+    width: 100%;
+    background: rgb(245, 168, 1);
+    color: white;
+    height: 50px;
+}
+
+footer > p {
+    font-size: 1.4rem;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 50px;
+}
+
+/* スマホ用 */
+@media screen and (max-width: 768px) {
+
+    .top-nav {
+        justify-content: space-between; 
+    }
+
+    .top-nav-logo {
+        margin-top: 5px;
+        margin-left: 5px;
+    }
+    
+    .top-nav-link {
+        display: none;
+    }
+
+    .top-nav-buttom {
+        display: block;
+        margin-right: 10px;
+        padding: 5px;
+        z-index: 2;
+        border: solid 2px #000000;
+        border-right: solid 3.1px #000000;;
+        background: #fff;
+    }
+
+    .top-nav-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 1;
+        background: rgba(0, 0, 0, .8);
+        display: block;
+    }
+    
+    .top-nav-menu-link {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .top-nav-menu-link > li {
+        width: 100%;
+        height: auto;
+        padding: .5em 1em;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    
+    .top-nav-menu-link > li > a{
+        color: #fff;
+    }
+    
+    /* ハンバーガメニュークリック後のアニメーション */
+    .top-nav-menu {
+        transform: translateX(-100vw); /* 画面幅分メニューをずらす（非表示にする）*/ 
+        transition: all .1s ease-in;
+    }
+
+    .top-nav-menu.is-active {
+        transform: translateX(0); /* メニューを表示する */
+    }
+
+    .common-inner {
+        padding: 40px 0;
+    }
+
+    /* Concept */
+    .concept-main {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .concept-item {
+        margin: 0 auto;
+    }
+
+    .concept-item:nth-child(-n+2) {
+        margin-bottom: 20px;
+    }
+
+    .concept-item:nth-child(n+2) {
+        margin-left: auto;
+    }
+
+    /* Product */
+    .product-item {
+        flex-direction: column;
+        padding: 5px;
+        margin: 10px;
+    }
+
+    .product-item > img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+    .product-item:nth-child(2) > img {
+        order: 0;
+    }
+    
+    .product-item:nth-child(2) > p {
+        order: 1;
+    }
+    
+    /* Works */
+    .works-items {
+        flex-direction: column;
+    }
+
+    /* contact */
+    .contact-main {
+        position: static;
+        height: auto;
+    }    
+    
+    iframe {
+        position: static;
+        width: 100%;
+        height: 400px;
+    }
+    
+    .contact-info {
+        position: static;
+        display: block;
+        background: rgb(255, 255, 255);
+        border-collapse: separate;
+        border-spacing: 10px 15px;
+    }
+}
